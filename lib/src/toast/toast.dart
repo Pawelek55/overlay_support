@@ -58,7 +58,7 @@ class _Toast extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 child: Container(
                   //color: toastTheme?.background,
-                    color: Colors.ambre,
+                    color: Colors.amber,
                   padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                   child: content,
                 ),
