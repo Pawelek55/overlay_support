@@ -58,7 +58,7 @@ class _Toast extends StatelessWidget {
               alignment: toastTheme?.alignment ?? const Alignment(0, 0.618),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: toastTheme?.background,
                   border: Border.all(color: Color.fromRGBO(243, 243, 243, 1)),
                   borderRadius: BorderRadius.all(const Radius.circular(10.0)),
                   boxShadow: [
