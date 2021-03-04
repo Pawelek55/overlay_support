@@ -19,7 +19,8 @@ class Toast {
 /// [duration] : the duration to show a toast,
 /// for most situation, you can use [Toast.LENGTH_SHORT] and [Toast.LENGTH_LONG]
 ///
-void toast(String message, {Duration duration = Toast.LENGTH_SHORT, BuildContext? context}) {
+void toast(String message,
+    {Duration duration = Toast.LENGTH_SHORT, BuildContext? context}) {
   if (duration <= Duration.zero) {
     //fast fail
     return;
@@ -47,32 +48,31 @@ class _Toast extends StatelessWidget {
     return SafeArea(
       maintainBottomViewPadding: true,
       child: Padding(
-        padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+        padding:
+            EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
         child: DefaultTextStyle(
           style: TextStyle(color: toastTheme?.textColor),
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Align(
               alignment: toastTheme?.alignment ?? const Alignment(0, 0.618),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Container(
-                  //color: toastTheme?.background,
-                  decoration: BoxDecoration(
-                    color: Colors.green,
-                    border: Border.all(color: Colors.blueAccent),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(.05),
-                        offset: Offset(0, 10.0),
-                        blurRadius: 10.0,
-                        spreadRadius: 0,
-                      ),
-                    ],
-                  ),
-                  padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                  child: content,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Color.fromRGBO(243, 243, 243, 1)),
+                  borderRadius: BorderRadius.all(const Radius.circular(10.0)),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(.05),
+                      offset: Offset(0, 10.0),
+                      blurRadius: 10.0,
+                      spreadRadius: 0,
+                    ),
+                  ],
                 ),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                child: content,
               ),
             ),
           ),
