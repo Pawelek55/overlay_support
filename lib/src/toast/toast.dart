@@ -57,7 +57,6 @@ class _Toast extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Container(
-                  child: Container(
                   //color: toastTheme?.background,
                   decoration: BoxDecoration(
                     color: Colors.green,
