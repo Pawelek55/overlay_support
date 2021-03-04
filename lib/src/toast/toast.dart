@@ -57,8 +57,20 @@ class _Toast extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Container(
+                  child: Container(
                   //color: toastTheme?.background,
-                    color: Colors.amber,
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    border: Border.all(color: Colors.blueAccent),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(.05),
+                        offset: Offset(0, 10.0),
+                        blurRadius: 10.0,
+                        spreadRadius: 0,
+                      ),
+                    ],
+                  ),
                   padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                   child: content,
                 ),
